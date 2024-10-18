@@ -1,0 +1,12 @@
+def contar_vogais(palavra):
+    vogais = 'aeiou'
+    contador = 0
+
+    for char in palavra.lower():
+        if char in vogais:
+            contador += 1
+    return contador        
+
+string = input('Digite uma string: ')
+quantidade_vogais = contar_vogais(string)
+print(f'Quantidade de Vogais: {quantidade_vogais}')
