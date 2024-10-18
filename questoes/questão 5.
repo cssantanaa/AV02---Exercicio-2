@@ -1,0 +1,8 @@
+def contar_palavras(texto):
+    palavras = texto.split( )
+    return len(palavras)
+
+
+string = input('Digite: ')
+numero_palavras = contar_palavras(string)
+print(f'Número de palavras: {numero_palavras}')
