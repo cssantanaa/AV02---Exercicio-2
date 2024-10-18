@@ -1,0 +1,22 @@
+def soma_lista(numeros):
+    total = 0
+    for numero in numeros:
+        total += numero
+    return total
+
+def entrada_numeros():
+    lista_numeros = []
+    while True:
+        entrada = input('Digite um número ou digite "sair" para encerrar: ')
+        if entrada.lower() == 'sair':
+            break
+        try:
+            numero = float(entrada)
+            lista_numeros.append(numero)
+        except ValueError:
+            print('Erro: Por favor, insira um número válido.')
+    return lista_numeros
+
+numeros_inseridos = entrada_numeros()
+resultado = sum(numeros_inseridos)   
+print(f'A soma dos números inseridos: {resultado}')     
