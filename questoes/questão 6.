@@ -1,0 +1,25 @@
+def media_lista(numeros):
+    total = sum(numeros)
+    return total / len(numeros)
+
+
+def entrada_numeros():
+    lista_numeros = []
+    while True:
+        entrada = input('Digite um número ou digite "sair" para encerrar: ')
+        if entrada.lower() == 'sair':
+            break
+        try:
+            numero = float(entrada)
+            lista_numeros.append(numero)
+        except ValueError:
+            print('Erro: Por favor, insira um número válido.')
+    return lista_numeros
+
+numeros_inseridos = entrada_numeros()
+
+try:
+    media = media_lista(numeros_inseridos)
+    print(f'Média dos números inseridos: {media}')
+except ValueError as e:
+    print (f'Erro: {e}')
