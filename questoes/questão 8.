@@ -1,0 +1,12 @@
+import re
+
+def validar_email(email):
+    padrao = r'^[^@]+@[^@]+\.[^@]+$'
+    if re.match (padrao, email):
+        return 'Email válido'
+    else:
+        return 'Email inválido'
+    
+email = input('Digite seu email: ')    
+resultado = validar_email(email)
+print(resultado)
